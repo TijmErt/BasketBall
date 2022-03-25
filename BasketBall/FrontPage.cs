@@ -13,28 +13,23 @@ namespace BasketBall
 {
     public partial class FrontPage : Form
     {
-        BBSpelers Gebruiker;
-        public FrontPage(BBSpelers gebruiker)
+        BBPersoon Gebruiker;
+        public FrontPage()
         {
             InitializeComponent();
-            Gebruiker = gebruiker;
-            if (gebruiker.Role == "Coach" || gebruiker.Role == "LeidingGevende")
-            {
-                btTeamAdd.Enabled = true;
-            }
-            else btTeamAdd.Enabled = true;
-            
+
         }
 
         private void btTeamView_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new TeamView(Gebruiker).ShowDialog();
+            new TeamView().ShowDialog();
         }
 
         private void btTeamAdd_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            new TeamAdd().ShowDialog();
         }
     }
 }

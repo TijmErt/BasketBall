@@ -14,9 +14,8 @@ namespace BasketBall
 {
     public partial class TeamView : Form
     {
-        BBSpelers gebruiker;
-        SqlDataReader reader;
-        public TeamView(BBSpelers gebruiker)
+
+        public TeamView()
         {
             InitializeComponent();
             

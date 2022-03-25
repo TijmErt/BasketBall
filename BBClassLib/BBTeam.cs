@@ -8,33 +8,44 @@ namespace BBClassLib
 {
     public class BBTeam
     {
-        private List<BBSpelers> BBGebruikerList = new List<BBSpelers>();
-        public string Name { get; private set; }
-        public int TeamID { get; private set; }
-        public int ClubID { get; private set; }
+        private int id;
+        private List<BBPersoon> Spelers = new List<BBPersoon>();
+        private List<BBPersoon> Coaches = new List<BBPersoon>();
+        private BBleeftijdsCategorie leeftijdsCategorie;
+        private BBGeslacht GeslachtsKlass;
 
-
-        public BBTeam(string name, int teamid, int clubid)
+        public BBTeam()
         {
-            Name = name;
-            TeamID = teamid;
-            ClubID = clubid;
+
         }
 
-        public void AddSpelersToTeam(BBSpelers gebruiker)
+        public void AddSpelersToTeam(BBPersoon speler)
         {
-            BBGebruikerList.Add(gebruiker);
+            Spelers.Add(speler);
+        }
+        public void AddCoachToTeam(BBPersoon coach)
+        {
+            Coaches.Add(coach);
+        }
+        public void RemoveSpelerFromTeam(BBPersoon speler)
+        {
+            Spelers.Remove(speler);
+        }
+        public void RemoveCoachesFromTeam(BBPersoon coach)
+        {
+            Coaches.Remove(coach);
         }
 
-        public List<BBSpelers> GetTeamSpelers()
+        public List<BBPersoon> GetTeamSpelers()
         {
-            return BBGebruikerList;
+            return Spelers;
+        }
+        public List<BBPersoon> GetTeamCoaches()
+        {
+            return Coaches;
         }
 
-        public void RemoveSpelerFromTeam(BBSpelers gebruiker)
-        {
-            BBGebruikerList.Remove(gebruiker);
-        }
+
 
     }
 }

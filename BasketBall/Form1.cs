@@ -10,25 +10,26 @@ namespace BasketBall
         }
         private void btLeidingGevende_Click(object sender, EventArgs e)
         {
-            BBSpelers LeidingGevende = new BBSpelers(6,"Rob", "De Bouwer", "LeidingGevende");
+            
             this.Hide();
-            new FrontPage(LeidingGevende).ShowDialog();
+            new FrontPage().ShowDialog();
 
         }
 
         private void btCoach_Click(object sender, EventArgs e)
         {
-            BBSpelers Coach = new BBSpelers(7, "Eelco", "Coacher", "Coach");
+            
             this.Hide();
-            new FrontPage(Coach).ShowDialog();
+            new FrontPage().ShowDialog();
         }
 
         private void btSpeler_Click(object sender, EventArgs e)
         {
-            BBSpelers Speler = new BBSpelers(6, "Tijm", "van Dongen", "Speler");
+            
             this.Hide();
-            new FrontPage(Speler).ShowDialog();
+            new FrontPage().ShowDialog();
         }
+
 
     }
 }

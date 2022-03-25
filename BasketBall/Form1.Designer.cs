@@ -51,6 +51,7 @@
             this.btCoach.TabIndex = 1;
             this.btCoach.Text = "Coach (Elco)";
             this.btCoach.UseVisualStyleBackColor = true;
+            this.btCoach.Click += new System.EventHandler(this.btCoach_Click);
             // 
             // btSpeler
             // 
@@ -60,6 +61,7 @@
             this.btSpeler.TabIndex = 2;
             this.btSpeler.Text = "Speler (Tijm)";
             this.btSpeler.UseVisualStyleBackColor = true;
+            this.btSpeler.Click += new System.EventHandler(this.btSpeler_Click);
             // 
             // Form1
             // 
